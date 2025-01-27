@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>История транзакций</title>
+</head>
+<body>
+    <h1>История транзакций</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Сумма</th>
+            <th>Категория</th>
+            <th>Дата</th>
+            <th>Описание</th>
+        </tr>
+        {% for transaction in transactions %}
+        <tr>
+            <td>{{ transaction[0] }}</td>
+            <td>{{ transaction[1] }}</td>
+            <td>{{ transaction[2] }}</td>
+            <td>{{ transaction[3] }}</td>
+            <td>{{ transaction[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href=\"/\">Назад</a>
+</body>
+</html>
